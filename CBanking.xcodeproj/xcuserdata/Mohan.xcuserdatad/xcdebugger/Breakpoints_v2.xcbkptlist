@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CBanking/HomeVC.swift"
-            timestampString = "491591715.501514"
+            filePath = "CBanking/AppDelegate.swift"
+            timestampString = "492257213.50192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "sideMeneSelectionChanged(_:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "connectionDidFinishLoading(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

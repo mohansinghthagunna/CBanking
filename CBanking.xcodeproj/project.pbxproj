@@ -23,15 +23,30 @@
 		010904BD1D4911EF007DBE14 /* CustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010904BB1D4911EF007DBE14 /* CustomNavView.xib */; };
 		010904C01D491250007DBE14 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010904BF1D491250007DBE14 /* HomeVC.swift */; };
 		01348D6B1D4E6CA1000D319F /* CBanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01348D6A1D4E6CA1000D319F /* CBanking.swift */; };
+		017608101D54F5DC001E2FA1 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0176080F1D54F5DC001E2FA1 /* NewsListCell.swift */; };
 		017C0C8D1D4A590F0061FDA9 /* LoanSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0C8C1D4A590F0061FDA9 /* LoanSearchVC.swift */; };
 		017C0C8F1D4A592F0061FDA9 /* DepositeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0C8E1D4A592F0061FDA9 /* DepositeSearchVC.swift */; };
 		017C0C921D4A5EE80061FDA9 /* LoanSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0C911D4A5EE80061FDA9 /* LoanSearchView.swift */; };
 		017C0C941D4A5EFD0061FDA9 /* LoanSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017C0C931D4A5EFD0061FDA9 /* LoanSearchView.xib */; };
+		01830E8E1D56459B004BEF0E /* EMICalculationDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01830E8D1D56459B004BEF0E /* EMICalculationDataVC.swift */; };
+		01830E901D564FA8004BEF0E /* ConvertingDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01830E8F1D564FA8004BEF0E /* ConvertingDataVC.swift */; };
+		019096221D4F7BC500BA6F1D /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019096211D4F7BC500BA6F1D /* NewsVC.swift */; };
+		019096241D4F7BE200BA6F1D /* BankListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019096231D4F7BE200BA6F1D /* BankListVC.swift */; };
+		019096261D4F7BFA00BA6F1D /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019096251D4F7BFA00BA6F1D /* FeedbackVC.swift */; };
+		019A14B81D4EEC810022200F /* li_splashscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 019A14B71D4EEC810022200F /* li_splashscreen.jpg */; };
+		01B3EF231D573DBD0086D4EB /* WebServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3EF221D573DBD0086D4EB /* WebServiceHelper.swift */; };
+		01EFB6331D53AB08004DD0C0 /* BankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EFB6321D53AB08004DD0C0 /* BankListView.swift */; };
+		01EFB6351D53AB5F004DD0C0 /* BankListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EFB6341D53AB5F004DD0C0 /* BankListView.xib */; };
+		01EFB63A1D53ABC4004DD0C0 /* BankListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EFB6381D53ABC4004DD0C0 /* BankListCell.swift */; };
+		01EFB63B1D53ABC4004DD0C0 /* BankListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EFB6391D53ABC4004DD0C0 /* BankListCell.xib */; };
 		01F3E6BF1D4D14370072AEE3 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F3E6BE1D4D14370072AEE3 /* SideMenuVC.swift */; };
+		01FB49CB1D55E8EA002DE733 /* CurrencyConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CA1D55E8EA002DE733 /* CurrencyConverterVC.swift */; };
+		01FB49CE1D55E909002DE733 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CD1D55E909002DE733 /* SettingsVC.swift */; };
+		01FB49D01D55E92F002DE733 /* EMICalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		010904841D4903C9007DBE14 /* CBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		010904841D4903C9007DBE14 /* C-Banking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C-Banking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		010904871D4903C9007DBE14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0109048C1D4903C9007DBE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0109048E1D4903C9007DBE14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,11 +70,26 @@
 		010904BB1D4911EF007DBE14 /* CustomNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomNavView.xib; sourceTree = "<group>"; };
 		010904BF1D491250007DBE14 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		01348D6A1D4E6CA1000D319F /* CBanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBanking.swift; sourceTree = "<group>"; };
+		0176080F1D54F5DC001E2FA1 /* NewsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		017C0C8C1D4A590F0061FDA9 /* LoanSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanSearchVC.swift; sourceTree = "<group>"; };
 		017C0C8E1D4A592F0061FDA9 /* DepositeSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositeSearchVC.swift; sourceTree = "<group>"; };
 		017C0C911D4A5EE80061FDA9 /* LoanSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanSearchView.swift; sourceTree = "<group>"; };
 		017C0C931D4A5EFD0061FDA9 /* LoanSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoanSearchView.xib; sourceTree = "<group>"; };
+		01830E8D1D56459B004BEF0E /* EMICalculationDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMICalculationDataVC.swift; sourceTree = "<group>"; };
+		01830E8F1D564FA8004BEF0E /* ConvertingDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertingDataVC.swift; sourceTree = "<group>"; };
+		019096211D4F7BC500BA6F1D /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		019096231D4F7BE200BA6F1D /* BankListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankListVC.swift; sourceTree = "<group>"; };
+		019096251D4F7BFA00BA6F1D /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		019A14B71D4EEC810022200F /* li_splashscreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = li_splashscreen.jpg; sourceTree = "<group>"; };
+		01B3EF221D573DBD0086D4EB /* WebServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceHelper.swift; sourceTree = "<group>"; };
+		01EFB6321D53AB08004DD0C0 /* BankListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankListView.swift; sourceTree = "<group>"; };
+		01EFB6341D53AB5F004DD0C0 /* BankListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankListView.xib; sourceTree = "<group>"; };
+		01EFB6381D53ABC4004DD0C0 /* BankListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankListCell.swift; sourceTree = "<group>"; };
+		01EFB6391D53ABC4004DD0C0 /* BankListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankListCell.xib; sourceTree = "<group>"; };
 		01F3E6BE1D4D14370072AEE3 /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		01FB49CA1D55E8EA002DE733 /* CurrencyConverterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConverterVC.swift; sourceTree = "<group>"; };
+		01FB49CD1D55E909002DE733 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMICalculatorVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +114,7 @@
 		010904851D4903C9007DBE14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				010904841D4903C9007DBE14 /* CBanking.app */,
+				010904841D4903C9007DBE14 /* C-Banking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,8 +137,10 @@
 		010904991D490653007DBE14 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				019A14B71D4EEC810022200F /* li_splashscreen.jpg */,
 				010904B21D49118C007DBE14 /* Helper.swift */,
 				01348D6A1D4E6CA1000D319F /* CBanking.swift */,
+				01B3EF221D573DBD0086D4EB /* WebServiceHelper.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -139,6 +171,7 @@
 		0109049D1D49068B007DBE14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01EFB6311D53AAD0004DD0C0 /* Bank List */,
 				017C0C901D4A5EBA0061FDA9 /* LoanSearchVIew */,
 				017C0C871D4A45130061FDA9 /* HomeView */,
 				010904B91D4911CD007DBE14 /* Custom Nav View */,
@@ -150,9 +183,15 @@
 		0109049E1D490693007DBE14 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				010904BE1D49122C007DBE14 /* Home */,
 				0109048B1D4903C9007DBE14 /* Main.storyboard */,
-				01F3E6BE1D4D14370072AEE3 /* SideMenuVC.swift */,
+				01FB49C91D55E89E002DE733 /* Currency Converter */,
+				01FB49C81D55E895002DE733 /* Settings */,
+				01FB49C71D55E871002DE733 /* EMI Calculator */,
+				010904BE1D49122C007DBE14 /* Home */,
+				019096271D4F7C0600BA6F1D /* Side Menu */,
+				019096281D4F7C0F00BA6F1D /* News */,
+				019096291D4F7C1B00BA6F1D /* Bank List */,
+				0190962A1D4F7C2400BA6F1D /* Feedback */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +275,76 @@
 			name = LoanSearchVIew;
 			sourceTree = "<group>";
 		};
+		019096271D4F7C0600BA6F1D /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				01F3E6BE1D4D14370072AEE3 /* SideMenuVC.swift */,
+			);
+			name = "Side Menu";
+			sourceTree = "<group>";
+		};
+		019096281D4F7C0F00BA6F1D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				019096211D4F7BC500BA6F1D /* NewsVC.swift */,
+				0176080F1D54F5DC001E2FA1 /* NewsListCell.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		019096291D4F7C1B00BA6F1D /* Bank List */ = {
+			isa = PBXGroup;
+			children = (
+				019096231D4F7BE200BA6F1D /* BankListVC.swift */,
+			);
+			name = "Bank List";
+			sourceTree = "<group>";
+		};
+		0190962A1D4F7C2400BA6F1D /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				019096251D4F7BFA00BA6F1D /* FeedbackVC.swift */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		01EFB6311D53AAD0004DD0C0 /* Bank List */ = {
+			isa = PBXGroup;
+			children = (
+				01EFB6321D53AB08004DD0C0 /* BankListView.swift */,
+				01EFB6341D53AB5F004DD0C0 /* BankListView.xib */,
+				01EFB6381D53ABC4004DD0C0 /* BankListCell.swift */,
+				01EFB6391D53ABC4004DD0C0 /* BankListCell.xib */,
+			);
+			name = "Bank List";
+			sourceTree = "<group>";
+		};
+		01FB49C71D55E871002DE733 /* EMI Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */,
+				01830E8D1D56459B004BEF0E /* EMICalculationDataVC.swift */,
+			);
+			name = "EMI Calculator";
+			sourceTree = "<group>";
+		};
+		01FB49C81D55E895002DE733 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				01FB49CD1D55E909002DE733 /* SettingsVC.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		01FB49C91D55E89E002DE733 /* Currency Converter */ = {
+			isa = PBXGroup;
+			children = (
+				01FB49CA1D55E8EA002DE733 /* CurrencyConverterVC.swift */,
+				01830E8F1D564FA8004BEF0E /* ConvertingDataVC.swift */,
+			);
+			name = "Currency Converter";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,7 +362,7 @@
 			);
 			name = CBanking;
 			productName = CBanking;
-			productReference = 010904841D4903C9007DBE14 /* CBanking.app */;
+			productReference = 010904841D4903C9007DBE14 /* C-Banking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,10 +406,13 @@
 			files = (
 				017C0C941D4A5EFD0061FDA9 /* LoanSearchView.xib in Resources */,
 				010904921D4903C9007DBE14 /* LaunchScreen.storyboard in Resources */,
+				019A14B81D4EEC810022200F /* li_splashscreen.jpg in Resources */,
 				0109048F1D4903C9007DBE14 /* Assets.xcassets in Resources */,
+				01EFB6351D53AB5F004DD0C0 /* BankListView.xib in Resources */,
 				0109048D1D4903C9007DBE14 /* Main.storyboard in Resources */,
 				010904BD1D4911EF007DBE14 /* CustomNavView.xib in Resources */,
 				010904B81D4911C6007DBE14 /* CustomTabView.xib in Resources */,
+				01EFB63B1D53ABC4004DD0C0 /* BankListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,20 +424,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				01348D6B1D4E6CA1000D319F /* CBanking.swift in Sources */,
+				01B3EF231D573DBD0086D4EB /* WebServiceHelper.swift in Sources */,
+				01EFB63A1D53ABC4004DD0C0 /* BankListCell.swift in Sources */,
 				017C0C921D4A5EE80061FDA9 /* LoanSearchView.swift in Sources */,
+				017608101D54F5DC001E2FA1 /* NewsListCell.swift in Sources */,
+				01FB49CB1D55E8EA002DE733 /* CurrencyConverterVC.swift in Sources */,
+				01830E8E1D56459B004BEF0E /* EMICalculationDataVC.swift in Sources */,
 				010904881D4903C9007DBE14 /* AppDelegate.swift in Sources */,
+				01FB49D01D55E92F002DE733 /* EMICalculatorVC.swift in Sources */,
 				01F3E6BF1D4D14370072AEE3 /* SideMenuVC.swift in Sources */,
 				010904C01D491250007DBE14 /* HomeVC.swift in Sources */,
+				019096261D4F7BFA00BA6F1D /* FeedbackVC.swift in Sources */,
 				017C0C8F1D4A592F0061FDA9 /* DepositeSearchVC.swift in Sources */,
 				017C0C8D1D4A590F0061FDA9 /* LoanSearchVC.swift in Sources */,
+				01EFB6331D53AB08004DD0C0 /* BankListView.swift in Sources */,
+				019096241D4F7BE200BA6F1D /* BankListVC.swift in Sources */,
 				010904B31D49118C007DBE14 /* Helper.swift in Sources */,
 				010904B11D490CAC007DBE14 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				010904B71D4911C6007DBE14 /* CustomTabView.swift in Sources */,
 				010904B01D490CAC007DBE14 /* TPKeyboardAvoidingTableView.m in Sources */,
 				010904BC1D4911EF007DBE14 /* CustomNavView.swift in Sources */,
 				010904AF1D490CAC007DBE14 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				019096221D4F7BC500BA6F1D /* NewsVC.swift in Sources */,
+				01FB49CE1D55E909002DE733 /* SettingsVC.swift in Sources */,
 				010904AE1D490CAC007DBE14 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				010904A31D490BFD007DBE14 /* SWRevealViewController.m in Sources */,
+				01830E901D564FA8004BEF0E /* ConvertingDataVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +570,7 @@
 				INFOPLIST_FILE = CBanking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = creatudevelopers.CBanking;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C-Banking";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBanking/CBanking-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -463,7 +587,7 @@
 				INFOPLIST_FILE = CBanking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = creatudevelopers.CBanking;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C-Banking";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CBanking/CBanking-Bridging-Header.h";
 			};

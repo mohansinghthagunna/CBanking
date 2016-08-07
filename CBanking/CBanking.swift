@@ -24,6 +24,7 @@ class CBanking: NSObject {
     //MARK: --Temp Variable Decalration
     private
     var _menuSelect:Int = 0
+    var _isMenuSelectionChanged = false
     
     //MARK:setter getter method
     internal
@@ -34,6 +35,16 @@ class CBanking: NSObject {
         }
         set {
             _menuSelect = newValue
+        }
+    }
+    
+    var isMenuSelectionChanged: Bool {
+        get {
+            
+            return _isMenuSelectionChanged
+        }
+        set {
+            _isMenuSelectionChanged = newValue
         }
     }
 }

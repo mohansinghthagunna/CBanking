@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "010904831D4903C9007DBE14"
-               BuildableName = "CBanking.app"
+               BuildableName = "C-Banking.app"
                BlueprintName = "CBanking"
                ReferencedContainer = "container:CBanking.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "010904831D4903C9007DBE14"
-            BuildableName = "CBanking.app"
+            BuildableName = "C-Banking.app"
             BlueprintName = "CBanking"
             ReferencedContainer = "container:CBanking.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "010904831D4903C9007DBE14"
-            BuildableName = "CBanking.app"
+            BuildableName = "C-Banking.app"
             BlueprintName = "CBanking"
             ReferencedContainer = "container:CBanking.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "010904831D4903C9007DBE14"
-            BuildableName = "CBanking.app"
+            BuildableName = "C-Banking.app"
             BlueprintName = "CBanking"
             ReferencedContainer = "container:CBanking.xcodeproj">
          </BuildableReference>

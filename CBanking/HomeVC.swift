@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,sideMenuDelegate {
+class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealViewControllerDelegate {
 
     //MARK: -- Outlets
 
@@ -17,6 +17,7 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,sideMenuD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        revealViewController().delegate = self
        
     }
     
@@ -70,9 +71,44 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,sideMenuD
         tabBarController?.selectedIndex = sender.tag
     }
     
-//MARK:--SideMenu Delegates
-    func sideMeneSelectionChanged(index: Int) {
+    // MARK: -- reveal view controller deligate button tapped
+    func revealController(revealController: SWRevealViewController!, willMoveToPosition position: FrontViewPosition) {
         
+        if(position == FrontViewPositionLeft) {
+         //menu closed
+            switch(CBanking.sharedInstance.menuSelect){
+            case 0:
+                //home selected
+                self.navigationController?.popToRootViewControllerAnimated(true)
+                break
+            case 1:
+                //emi selected
+                //deposite button tapped
+                let emiCalculatorVC = self.storyboard!.instantiateViewControllerWithIdentifier("emiCalculatorVC") as! EMICalculatorVC
+                self.navigationController!.pushViewController(emiCalculatorVC, animated: true)
+                break
+                
+            case 2:
+                //emi selected
+                //deposite button tapped
+                let currencyConvVC = self.storyboard!.instantiateViewControllerWithIdentifier("currencyConvVC") as! CurrencyConverterVC
+                self.navigationController!.pushViewController(currencyConvVC, animated: true)
+                break
+            case 3:
+                //emi selected
+                //deposite button tapped
+                let settingVC = self.storyboard!.instantiateViewControllerWithIdentifier("settingVC") as! SettingsVC
+                self.navigationController!.pushViewController(settingVC, animated: true)
+                break
+            default:
+                break
+            }
+        }
+        else{
+            //menu open
+        }
     }
+    
+
 
 }

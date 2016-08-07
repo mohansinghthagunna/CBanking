@@ -14,6 +14,10 @@ class CustomTabView: UIView {
     
     //MARK: --Outlets
     
+    @IBOutlet weak var btnBankList: UIButton!
+    @IBOutlet weak var btnFeedBack: UIButton!
+    @IBOutlet weak var btnNews: UIButton!
+    @IBOutlet weak var btnHome: UIButton!
     //MARK: --Declarations
     var view:UIView!
     var delegate: tabBarIconTapped?
@@ -51,27 +55,32 @@ class CustomTabView: UIView {
     }
     
     //MARK: --Custom Functions
+    func isTabBarShow(flag:Bool)  {
+        
+        self.view.hidden = flag
+        
+    }
     func resetButtonImage(){
-//        btnCalender.setBackgroundImage(UIImage(named:"calOff.png"), forState: .Normal)
-//        btnMaterials.setBackgroundImage(UIImage(named:"wasteOff.png"), forState: .Normal)
-//        btnReport.setBackgroundImage(UIImage(named:"reportOff.png"), forState: .Normal)
-//        btnMoreInfo.setBackgroundImage(UIImage(named:"servicesOff.png"), forState: .Normal)
+        btnHome.setImage(UIImage(named:"homeUnselected.png"), forState: .Normal)
+        btnNews.setImage(UIImage(named:"newsUnselected.png"), forState: .Normal)
+        btnBankList.setImage(UIImage(named:"bankListUnselected.png"), forState: .Normal)
+        btnFeedBack.setImage(UIImage(named:"FeedbackUnselected.png"), forState: .Normal)
     }
     
     func setSelectedIcon(let index:Int){
-//        switch index {
-//        case 0:
-//            btnCalender.setBackgroundImage(UIImage(named:"calOn.png"), forState: .Normal)
-//        case 1:
-//            btnMaterials.setBackgroundImage(UIImage(named:"wasteOn.png"), forState: .Normal)
-//        case 2:
-//            btnReport.setBackgroundImage(UIImage(named:"reportOn.png"), forState: .Normal)
-//        case 3:
-//            btnMoreInfo.setBackgroundImage(UIImage(named:"servicesOn.png"), forState: .Normal)
-//            
-//        default:
-//            print("no tab menu click found button id =  \(index)")
-//            break
-//        }
+        switch index {
+        case 0:
+            btnHome.setImage(UIImage(named:"homeSelected.png"), forState: .Normal)
+        case 1:
+            btnNews.setImage(UIImage(named:"newsSelected.png"), forState: .Normal)
+        case 2:
+            btnBankList.setImage(UIImage(named:"bankListSelected.png"), forState: .Normal)
+        case 3:
+            btnFeedBack.setImage(UIImage(named:"feedbackSelected.png"), forState: .Normal)
+            
+        default:
+            print("no tab menu click found button id =  \(index)")
+            break
+        }
     }
 }

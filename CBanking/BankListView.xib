@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankListView" customModule="CBanking" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="lh5-oi-5aZ" id="Ge3-Ai-may"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lh5-oi-5aZ">
+                    <rect key="frame" x="0.0" y="182" width="320" height="336"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9Wa-ny-NzB"/>
+                        <outlet property="delegate" destination="-1" id="sof-73-W1n"/>
+                    </connections>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loan" translatesAutoresizingMaskIntoConstraints="NO" id="XYR-ts-E8n">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="182" id="8zl-9N-aJF"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lh5-oi-5aZ" firstAttribute="top" secondItem="XYR-ts-E8n" secondAttribute="bottom" id="0ty-Ip-H2x"/>
+                <constraint firstItem="lh5-oi-5aZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2lb-Xt-AeW"/>
+                <constraint firstAttribute="trailing" secondItem="lh5-oi-5aZ" secondAttribute="trailing" id="KI8-QS-afP"/>
+                <constraint firstItem="XYR-ts-E8n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="USV-x3-mlC"/>
+                <constraint firstAttribute="bottom" secondItem="lh5-oi-5aZ" secondAttribute="bottom" id="l9I-XV-D9Y"/>
+                <constraint firstAttribute="trailing" secondItem="XYR-ts-E8n" secondAttribute="trailing" id="tBH-wn-Ibv"/>
+                <constraint firstItem="XYR-ts-E8n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vXJ-Mj-xmz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="245" y="283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="loan" width="330" height="172"/>
+    </resources>
+</document>

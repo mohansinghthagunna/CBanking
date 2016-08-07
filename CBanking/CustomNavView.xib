@@ -3,41 +3,45 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavView" customModule="CBanking" customModuleProvider="target">
-            <connections>
-                <outlet property="lblTitle" destination="eRg-8o-KoT" id="Qth-0N-WXy"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavView" customModule="CBanking" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="navBar" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTz-ei-hP5">
-                    <rect key="frame" x="7" y="24" width="50" height="36"/>
-                    <state key="normal" image="settings"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTz-ei-hP5">
+                    <rect key="frame" x="7" y="22" width="50" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XTz-ei-hP5" secondAttribute="height" multiplier="25:19" id="3gb-gg-QFu"/>
+                    </constraints>
+                    <state key="normal" image="hamburgur"/>
                     <connections>
                         <action selector="leftButtonClick:" destination="-1" eventType="touchUpInside" id="dDb-8A-RkQ"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="eRg-8o-KoT">
-                    <rect key="frame" x="54" y="29" width="190" height="32"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="councilLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tPP-xt-T6j">
-                    <rect key="frame" x="252" y="24" width="60" height="36"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileInit" translatesAutoresizingMaskIntoConstraints="NO" id="tPP-xt-T6j">
+                    <rect key="frame" x="281" y="29" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="tPP-xt-T6j" secondAttribute="height" multiplier="1:1" id="Qkf-My-zs3"/>
+                    </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.37647058823529411" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XTz-ei-hP5" secondAttribute="bottom" id="9P1-PQ-Jag"/>
+                <constraint firstItem="tPP-xt-T6j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="29" id="COC-So-WCp"/>
+                <constraint firstItem="XTz-ei-hP5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="Roe-9C-iRP"/>
+                <constraint firstItem="XTz-ei-hP5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="7" id="XYn-Yd-jDD"/>
+                <constraint firstAttribute="bottom" secondItem="tPP-xt-T6j" secondAttribute="bottom" id="lJm-0e-ePh"/>
+                <constraint firstAttribute="trailing" secondItem="tPP-xt-T6j" secondAttribute="trailing" constant="8" id="wvw-fP-SEI"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="councilLogo" width="157" height="144"/>
-        <image name="settings" width="31" height="27"/>
+        <image name="hamburgur" width="32" height="18"/>
+        <image name="profileInit" width="27" height="29"/>
     </resources>
 </document>

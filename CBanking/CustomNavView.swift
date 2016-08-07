@@ -51,7 +51,7 @@ protocol navBarBurgerMenuTapped {
     
     //MARK: --Custom Functions
     func setTitle(title:String){
-        lblTitle.text = title
+        //lblTitle.text = title
     }
     
     //MARK: --BUtton Actions

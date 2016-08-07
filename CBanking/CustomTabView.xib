@@ -3,59 +3,86 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabView" customModule="CBanking" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabView" customModule="CBanking" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBankList" destination="PxX-nK-IGV" id="fP2-X5-JI6"/>
+                <outlet property="btnFeedBack" destination="uLj-Wj-NOI" id="Pge-Ba-vNt"/>
+                <outlet property="btnHome" destination="Fme-0P-HM1" id="zOe-Sm-0dX"/>
+                <outlet property="btnNews" destination="Ygq-Br-RJr" id="Skj-VH-o7f"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fme-0P-HM1">
-                    <rect key="frame" x="80" y="0.0" width="80" height="80"/>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fme-0P-HM1">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="mc0-YL-68A"/>
+                        <constraint firstAttribute="width" secondItem="Fme-0P-HM1" secondAttribute="height" multiplier="8:5" id="fS1-xf-UIk"/>
                     </constraints>
+                    <state key="normal" image="homeSelected"/>
+                    <connections>
+                        <action selector="tabButtonTapped:" destination="-1" eventType="touchUpInside" id="oQQ-SS-3Wc"/>
+                    </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Br-RJr">
-                    <rect key="frame" x="160" y="0.0" width="80" height="80"/>
+                <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Br-RJr">
+                    <rect key="frame" x="80" y="0.0" width="80" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="ES2-rz-5Tc"/>
+                        <constraint firstAttribute="width" secondItem="Ygq-Br-RJr" secondAttribute="height" multiplier="8:5" id="d9n-Pk-cmP"/>
                     </constraints>
+                    <state key="normal" image="newsUnselected"/>
+                    <connections>
+                        <action selector="tabButtonTapped:" destination="-1" eventType="touchUpInside" id="uOi-R1-jYU"/>
+                    </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxX-nK-IGV">
-                    <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxX-nK-IGV">
+                    <rect key="frame" x="160" y="0.0" width="80" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="Ed5-Xa-qmA"/>
+                        <constraint firstAttribute="width" secondItem="PxX-nK-IGV" secondAttribute="height" multiplier="8:5" id="eJh-IS-4tY"/>
                     </constraints>
+                    <state key="normal" image="bankListUnselected"/>
+                    <connections>
+                        <action selector="tabButtonTapped:" destination="-1" eventType="touchUpInside" id="074-7D-kKK"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-Wj-NOI">
-                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLj-Wj-NOI">
+                    <rect key="frame" x="240" y="0.0" width="80" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="zRA-dA-3mL"/>
+                        <constraint firstAttribute="width" secondItem="uLj-Wj-NOI" secondAttribute="height" multiplier="8:5" id="qJL-HM-4ko"/>
                     </constraints>
+                    <state key="normal" image="feedbackSelected"/>
+                    <connections>
+                        <action selector="tabButtonTapped:" destination="-1" eventType="touchUpInside" id="ePO-hk-VqN"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.37531960239917106" green="0.5665932037962047" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Fme-0P-HM1" firstAttribute="leading" secondItem="uLj-Wj-NOI" secondAttribute="trailing" id="1D9-82-5Bx"/>
-                <constraint firstItem="uLj-Wj-NOI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2UU-gW-ueR"/>
-                <constraint firstAttribute="bottom" secondItem="Ygq-Br-RJr" secondAttribute="bottom" constant="-30" id="Eag-7t-dfA"/>
-                <constraint firstItem="uLj-Wj-NOI" firstAttribute="width" secondItem="Fme-0P-HM1" secondAttribute="width" id="IDY-9x-M14"/>
-                <constraint firstItem="PxX-nK-IGV" firstAttribute="leading" secondItem="Ygq-Br-RJr" secondAttribute="trailing" id="Ijr-jE-j3W"/>
-                <constraint firstAttribute="bottom" secondItem="PxX-nK-IGV" secondAttribute="bottom" constant="-30" id="OdC-Ww-ZMg"/>
-                <constraint firstAttribute="bottom" secondItem="uLj-Wj-NOI" secondAttribute="bottom" constant="-30" id="SqU-km-JLz"/>
-                <constraint firstAttribute="trailing" secondItem="PxX-nK-IGV" secondAttribute="trailing" id="cB8-Kk-Egb"/>
-                <constraint firstItem="Ygq-Br-RJr" firstAttribute="width" secondItem="PxX-nK-IGV" secondAttribute="width" id="fQX-EB-jR1"/>
-                <constraint firstItem="Ygq-Br-RJr" firstAttribute="leading" secondItem="Fme-0P-HM1" secondAttribute="trailing" id="geL-MJ-bh9"/>
-                <constraint firstItem="Fme-0P-HM1" firstAttribute="width" secondItem="Ygq-Br-RJr" secondAttribute="width" id="jws-Eh-sEx"/>
-                <constraint firstAttribute="bottom" secondItem="Fme-0P-HM1" secondAttribute="bottom" constant="-30" id="mdA-oH-S7i"/>
-                <constraint firstItem="Fme-0P-HM1" firstAttribute="leading" secondItem="uLj-Wj-NOI" secondAttribute="trailing" id="nYu-wK-tcu"/>
-                <constraint firstItem="PxX-nK-IGV" firstAttribute="leading" secondItem="Ygq-Br-RJr" secondAttribute="trailing" id="s8s-pw-t60"/>
-                <constraint firstItem="Ygq-Br-RJr" firstAttribute="leading" secondItem="Fme-0P-HM1" secondAttribute="trailing" id="v3Z-LX-8L4"/>
+                <constraint firstItem="Ygq-Br-RJr" firstAttribute="leading" secondItem="Fme-0P-HM1" secondAttribute="trailing" id="5Eb-5N-51G"/>
+                <constraint firstAttribute="bottom" secondItem="uLj-Wj-NOI" secondAttribute="bottom" id="7GL-FK-gP9"/>
+                <constraint firstItem="uLj-Wj-NOI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bb9-Wo-bH9"/>
+                <constraint firstAttribute="bottom" secondItem="PxX-nK-IGV" secondAttribute="bottom" id="Jrx-Az-058"/>
+                <constraint firstAttribute="bottom" secondItem="Ygq-Br-RJr" secondAttribute="bottom" id="KUA-aB-By7"/>
+                <constraint firstItem="PxX-nK-IGV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g0D-Od-HQX"/>
+                <constraint firstItem="Ygq-Br-RJr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gYX-iR-tc1"/>
+                <constraint firstAttribute="trailing" secondItem="uLj-Wj-NOI" secondAttribute="trailing" id="jfG-8N-dTr"/>
+                <constraint firstAttribute="bottom" secondItem="Fme-0P-HM1" secondAttribute="bottom" id="oE1-zc-qlv"/>
+                <constraint firstItem="PxX-nK-IGV" firstAttribute="leading" secondItem="Ygq-Br-RJr" secondAttribute="trailing" id="oIe-0M-LUk"/>
+                <constraint firstItem="Fme-0P-HM1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pD3-tk-bI3"/>
+                <constraint firstItem="Fme-0P-HM1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t0J-NF-EuD"/>
+                <constraint firstItem="uLj-Wj-NOI" firstAttribute="leading" secondItem="PxX-nK-IGV" secondAttribute="trailing" id="yJ6-X3-V9l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="325" y="125"/>
+            <point key="canvasLocation" x="325" y="122"/>
         </view>
     </objects>
+    <resources>
+        <image name="bankListUnselected" width="72" height="39"/>
+        <image name="feedbackSelected" width="74" height="40"/>
+        <image name="homeSelected" width="43" height="40"/>
+        <image name="newsUnselected" width="40" height="39"/>
+    </resources>
 </document>

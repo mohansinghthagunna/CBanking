@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource{
+class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
     //MARK: -- Outlets
     
@@ -21,15 +21,12 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     
     //Mark: --Decalrations
     let loanTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
+     var customTabView =  CustomTabView()
     
     // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.tabBarController?.tabBar.hidden = true
         
         
         //adding navbar to the view controller
@@ -40,10 +37,15 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         
         
         //adding tabbar to the view controller
-        let customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
+         customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
         customTabView.setSelectedIcon(0)
         self.view.addSubview(customTabView);
         customTabView.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = true
+
         
     }
     
@@ -57,7 +59,33 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         else if sender.tag == 1{
             //timer button
             ViewPicker.hidden = false
+             customTabView.isTabBarShow(true)
+            
         }
+        else if sender.tag == 2{
+            let bankListVC = self.storyboard!.instantiateViewControllerWithIdentifier("BankListVC") as! BankListVC
+            self.navigationController!.pushViewController(bankListVC, animated: true)
+
+        }
+    }
+    
+    @IBAction func pickerViewDoneTapped(sender: AnyObject) {
+        ViewPicker.hidden = true
+        customTabView.isTabBarShow(false)
+    }
+    
+    @IBAction func PickerViewCancelTapped(sender: AnyObject) {
+        ViewPicker.hidden = true
+         customTabView.isTabBarShow(false)
+    }
+    
+    //MARK: --textField Delegates
+    func textFieldDidBeginEditing(textField: UITextField) {
+        tableView.hidden = false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        tableView.hidden = true
     }
     //MARK: --Table View Deligate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,12 +100,12 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.hidden = true
-        btnLoanType.titleLabel!.text = loanTypes[indexPath.row]
+      //  btnLoanType.titleLabel!.text = loanTypes[indexPath.row]
     }
     
     //Mark: --Picker View Delegates
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 3
+        return 2
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
