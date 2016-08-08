@@ -11,6 +11,7 @@ import UIKit
 class BankListView: UIView,UITableViewDelegate {
     //MARK: --Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headImage: UIImageView!
     
     
     //MARK: --Declarations
@@ -46,7 +47,10 @@ class BankListView: UIView,UITableViewDelegate {
     override func layoutSubviews() {
         tableView.registerNib(UINib(nibName: "BankListCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
-    
+    //MARK:--Custom Function
+    func resetHeadImage(image:UIImage){
+        headImage.image = image
+    }
     //MARK: --Table View Delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5

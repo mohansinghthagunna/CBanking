@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
+class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
 
     //MARK: -- Outlets
     @IBOutlet weak var ViewPicker: UIView!
@@ -19,7 +19,9 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     @IBOutlet weak var txtFieldTotalAmount: UITextField!
     
     //Mark: --Decalrations
-    let loanTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
+    let depositeTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
+    var yearSet = 0
+    var monthSet = 0
     var customTabView =  CustomTabView()
     
     // MARK: -- Self ViewController Functions
@@ -44,8 +46,6 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     
     override func viewWillAppear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = true
-        
-      
     }
     
     //Mark: --Button Action
@@ -53,16 +53,31 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     @IBAction func buttonTapped(sender: AnyObject) {
         if sender.tag == 0{
             //loan type button
+            pickerView.hidden = true
+             customTabView.isTabBarShow(false)
+            if tableView.hidden {
             tableView.hidden = false
+            }
+            else{
+                tableView.hidden = true
+            }
         }
         else if sender.tag == 1{
             //timer button
-            ViewPicker.hidden = false
+            tableView.hidden = true
+            if pickerView.hidden {
+                pickerView.hidden = false
+            }
+            else{
+                pickerView.hidden = true
+                
+            }
             customTabView.isTabBarShow(true)
             
         }
         else if sender.tag == 2{
             let bankListVC = self.storyboard!.instantiateViewControllerWithIdentifier("BankListVC") as! BankListVC
+            bankListVC.setTopImages(UIImage(named: "deposit.png")!)
             self.navigationController!.pushViewController(bankListVC, animated: true)
             
         }
@@ -70,6 +85,7 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     @IBAction func pickerViewDoneTapped(sender: AnyObject) {
         ViewPicker.hidden = true
         customTabView.isTabBarShow(false)
+        btnTimePeriod.setTitle("\(yearSet) Year \(monthSet) Month", forState: .Normal)
     }
     
     @IBAction func PickerViewCancelTapped(sender: AnyObject) {
@@ -79,18 +95,18 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     
     //MARK: --Table View Deligate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loanTypes.count
+        return depositeTypes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel!.text = loanTypes[indexPath.row]
+        cell.textLabel!.text = depositeTypes[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.hidden = true
-        //  btnLoanType.titleLabel!.text = loanTypes[indexPath.row]
+        btnLoanType.setTitle(depositeTypes[indexPath.row], forState: .Normal)
     }
     
     //Mark: --Picker View Delegates
@@ -100,10 +116,10 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
-            return 20
+            return 31
         }
         else if component == 1 {
-            return 11
+            return 12
         }
         else{
             return 30
@@ -121,6 +137,19 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
             return "\(row) Day"
         }
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if component == 0{
+            yearSet = row
+        }
+        if component == 1{
+            monthSet = row
+        }
+        
+       
+    }
+    
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
  self.navigationController?.popViewControllerAnimated(true)

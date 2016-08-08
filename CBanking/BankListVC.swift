@@ -12,7 +12,8 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
     
     //MARK: -- Outlets
     
-    
+    //MARK:-- Declaration
+    var image = UIImage()
     // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,9 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
         
         //adding tabbar to the view controller
         let bankListView =  BankListView(frame: CGRectMake(0,0,UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height-50))
+        bankListView.resetHeadImage(image)
         self.view.addSubview(bankListView);
+        
         
         //adding navbar to the view controller
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
@@ -41,11 +44,14 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
         customTabView.setSelectedIcon(2)
         self.view.addSubview(customTabView);
         customTabView.delegate = self
-        
-       
-        
-        
+        }
+    
+    
+    //MARK: --Custom Function
+    func setTopImages(image:UIImage){
+        self.image = image
     }
+    
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
         if CBanking.sharedInstance.menuSelect == 2 {

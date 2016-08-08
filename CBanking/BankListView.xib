@@ -5,8 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankListView" customModule="CBanking" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankListView" customModule="C_Banking" customModuleProvider="target">
             <connections>
+                <outlet property="headImage" destination="XYR-ts-E8n" id="LKJ-6S-fPY"/>
                 <outlet property="tableView" destination="lh5-oi-5aZ" id="Ge3-Ai-may"/>
             </connections>
         </placeholder>

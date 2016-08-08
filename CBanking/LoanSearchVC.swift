@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
+class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource{
 
     //MARK: -- Outlets
     
@@ -20,14 +20,15 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     @IBOutlet weak var txtFieldTotalAmount: UITextField!
     
     //Mark: --Decalrations
-    let loanTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
-     var customTabView =  CustomTabView()
+    let LoanTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
+    var yearSet = 0
+    var monthSet = 0
+    var customTabView =  CustomTabView()
     
     // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         
         //adding navbar to the view controller
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
@@ -37,16 +38,15 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         
         
         //adding tabbar to the view controller
-         customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
+        customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
         customTabView.setSelectedIcon(0)
         self.view.addSubview(customTabView);
         customTabView.delegate = self
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = true
-
-        
     }
     
     //Mark: --Button Action
@@ -54,53 +54,62 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     @IBAction func buttonTapped(sender: AnyObject) {
         if sender.tag == 0{
             //loan type button
-            tableView.hidden = false
+            pickerView.hidden = true
+            customTabView.isTabBarShow(false)
+            if tableView.hidden {
+                tableView.hidden = false
+            }
+            else{
+                tableView.hidden = true
+            }
         }
         else if sender.tag == 1{
             //timer button
-            ViewPicker.hidden = false
-             customTabView.isTabBarShow(true)
+            tableView.hidden = true
+            if pickerView.hidden {
+                pickerView.hidden = false
+                 customTabView.isTabBarShow(true)
+            }
+            else{
+                pickerView.hidden = true
+                 customTabView.isTabBarShow(false)
+                
+            }
+           
             
         }
         else if sender.tag == 2{
             let bankListVC = self.storyboard!.instantiateViewControllerWithIdentifier("BankListVC") as! BankListVC
+            bankListVC.setTopImages(UIImage(named: "loan.png")!)
             self.navigationController!.pushViewController(bankListVC, animated: true)
-
+            
         }
     }
-    
     @IBAction func pickerViewDoneTapped(sender: AnyObject) {
         ViewPicker.hidden = true
         customTabView.isTabBarShow(false)
+        btnTimePeriod.setTitle("\(yearSet) Year \(monthSet) Month", forState: .Normal)
     }
     
     @IBAction func PickerViewCancelTapped(sender: AnyObject) {
         ViewPicker.hidden = true
-         customTabView.isTabBarShow(false)
+        customTabView.isTabBarShow(false)
     }
     
-    //MARK: --textField Delegates
-    func textFieldDidBeginEditing(textField: UITextField) {
-        tableView.hidden = false
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        tableView.hidden = true
-    }
     //MARK: --Table View Deligate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loanTypes.count
+        return LoanTypes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel!.text = loanTypes[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
+        cell.textLabel!.text = LoanTypes[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.hidden = true
-      //  btnLoanType.titleLabel!.text = loanTypes[indexPath.row]
+        btnLoanType.setTitle(LoanTypes[indexPath.row], forState: .Normal)
     }
     
     //Mark: --Picker View Delegates
@@ -110,10 +119,10 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
-            return 20
+            return 31
         }
         else if component == 1 {
-            return 11
+            return 12
         }
         else{
             return 30
@@ -131,9 +140,22 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
             return "\(row) Day"
         }
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if component == 0{
+            yearSet = row
+        }
+        if component == 1{
+            monthSet = row
+        }
+        
+        
+    }
+    
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
-       self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // MARK: -- tab bar deligate button tapped
