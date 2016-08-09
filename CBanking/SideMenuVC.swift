@@ -46,7 +46,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       CBanking.sharedInstance.menuSelect = indexPath.row
+          CBanking.sharedInstance.menuSelect = indexPath.row
           revealViewController().revealToggleAnimated(true)
     }
  

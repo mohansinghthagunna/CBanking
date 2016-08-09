@@ -43,6 +43,19 @@
 		01FB49CB1D55E8EA002DE733 /* CurrencyConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CA1D55E8EA002DE733 /* CurrencyConverterVC.swift */; };
 		01FB49CE1D55E909002DE733 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CD1D55E909002DE733 /* SettingsVC.swift */; };
 		01FB49D01D55E92F002DE733 /* EMICalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */; };
+		28BF72AF1D59725E005734AE /* Banks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72AE1D59725E005734AE /* Banks.swift */; };
+		28BF72B11D5972A0005734AE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72B01D5972A0005734AE /* Branch.swift */; };
+		28BF72B31D5972E5005734AE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72B21D5972E5005734AE /* Currency.swift */; };
+		28BF72B51D597317005734AE /* Deposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72B41D597317005734AE /* Deposite.swift */; };
+		28BF72B71D597340005734AE /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72B61D597340005734AE /* Feedback.swift */; };
+		28BF72B91D597358005734AE /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72B81D597358005734AE /* Loan.swift */; };
+		28BF72BB1D59737A005734AE /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72BA1D59737A005734AE /* News.swift */; };
+		28BF72BD1D597399005734AE /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72BC1D597399005734AE /* Schedule.swift */; };
+		28BF72BF1D5973AF005734AE /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72BE1D5973AF005734AE /* Users.swift */; };
+		28BF72C11D5973BE005734AE /* Atm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72C01D5973BE005734AE /* Atm.swift */; };
+		28BF72C31D5973CC005734AE /* Atm_Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72C21D5973CC005734AE /* Atm_Schedule.swift */; };
+		28BF72C71D59DC39005734AE /* EMIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72C61D59DC38005734AE /* EMIModel.swift */; };
+		28BF72C91D59DFBB005734AE /* EMIResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BF72C81D59DFBB005734AE /* EMIResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +103,19 @@
 		01FB49CA1D55E8EA002DE733 /* CurrencyConverterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyConverterVC.swift; sourceTree = "<group>"; };
 		01FB49CD1D55E909002DE733 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMICalculatorVC.swift; sourceTree = "<group>"; };
+		28BF72AE1D59725E005734AE /* Banks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banks.swift; sourceTree = "<group>"; };
+		28BF72B01D5972A0005734AE /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		28BF72B21D5972E5005734AE /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		28BF72B41D597317005734AE /* Deposite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deposite.swift; sourceTree = "<group>"; };
+		28BF72B61D597340005734AE /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		28BF72B81D597358005734AE /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		28BF72BA1D59737A005734AE /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		28BF72BC1D597399005734AE /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		28BF72BE1D5973AF005734AE /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		28BF72C01D5973BE005734AE /* Atm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atm.swift; sourceTree = "<group>"; };
+		28BF72C21D5973CC005734AE /* Atm_Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atm_Schedule.swift; sourceTree = "<group>"; };
+		28BF72C61D59DC38005734AE /* EMIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMIModel.swift; sourceTree = "<group>"; };
+		28BF72C81D59DFBB005734AE /* EMIResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMIResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +190,18 @@
 		0109049C1D490679007DBE14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28BF72AE1D59725E005734AE /* Banks.swift */,
+				28BF72B01D5972A0005734AE /* Branch.swift */,
+				28BF72B21D5972E5005734AE /* Currency.swift */,
+				28BF72B41D597317005734AE /* Deposite.swift */,
+				28BF72B61D597340005734AE /* Feedback.swift */,
+				28BF72B81D597358005734AE /* Loan.swift */,
+				28BF72BA1D59737A005734AE /* News.swift */,
+				28BF72BC1D597399005734AE /* Schedule.swift */,
+				28BF72BE1D5973AF005734AE /* Users.swift */,
+				28BF72C01D5973BE005734AE /* Atm.swift */,
+				28BF72C21D5973CC005734AE /* Atm_Schedule.swift */,
+				28BF72C61D59DC38005734AE /* EMIModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -324,6 +362,7 @@
 			children = (
 				01FB49CF1D55E92F002DE733 /* EMICalculatorVC.swift */,
 				01830E8D1D56459B004BEF0E /* EMICalculationDataVC.swift */,
+				28BF72C81D59DFBB005734AE /* EMIResultCell.swift */,
 			);
 			name = "EMI Calculator";
 			sourceTree = "<group>";
@@ -423,12 +462,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BF72C91D59DFBB005734AE /* EMIResultCell.swift in Sources */,
 				01348D6B1D4E6CA1000D319F /* CBanking.swift in Sources */,
+				28BF72B91D597358005734AE /* Loan.swift in Sources */,
 				01B3EF231D573DBD0086D4EB /* WebServiceHelper.swift in Sources */,
 				01EFB63A1D53ABC4004DD0C0 /* BankListCell.swift in Sources */,
 				017C0C921D4A5EE80061FDA9 /* LoanSearchView.swift in Sources */,
 				017608101D54F5DC001E2FA1 /* NewsListCell.swift in Sources */,
 				01FB49CB1D55E8EA002DE733 /* CurrencyConverterVC.swift in Sources */,
+				28BF72B31D5972E5005734AE /* Currency.swift in Sources */,
 				01830E8E1D56459B004BEF0E /* EMICalculationDataVC.swift in Sources */,
 				010904881D4903C9007DBE14 /* AppDelegate.swift in Sources */,
 				01FB49D01D55E92F002DE733 /* EMICalculatorVC.swift in Sources */,
@@ -436,19 +478,29 @@
 				010904C01D491250007DBE14 /* HomeVC.swift in Sources */,
 				019096261D4F7BFA00BA6F1D /* FeedbackVC.swift in Sources */,
 				017C0C8F1D4A592F0061FDA9 /* DepositeSearchVC.swift in Sources */,
+				28BF72B71D597340005734AE /* Feedback.swift in Sources */,
 				017C0C8D1D4A590F0061FDA9 /* LoanSearchVC.swift in Sources */,
 				01EFB6331D53AB08004DD0C0 /* BankListView.swift in Sources */,
+				28BF72B51D597317005734AE /* Deposite.swift in Sources */,
 				019096241D4F7BE200BA6F1D /* BankListVC.swift in Sources */,
 				010904B31D49118C007DBE14 /* Helper.swift in Sources */,
+				28BF72AF1D59725E005734AE /* Banks.swift in Sources */,
+				28BF72C71D59DC39005734AE /* EMIModel.swift in Sources */,
 				010904B11D490CAC007DBE14 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				28BF72C31D5973CC005734AE /* Atm_Schedule.swift in Sources */,
+				28BF72B11D5972A0005734AE /* Branch.swift in Sources */,
 				010904B71D4911C6007DBE14 /* CustomTabView.swift in Sources */,
 				010904B01D490CAC007DBE14 /* TPKeyboardAvoidingTableView.m in Sources */,
+				28BF72C11D5973BE005734AE /* Atm.swift in Sources */,
 				010904BC1D4911EF007DBE14 /* CustomNavView.swift in Sources */,
 				010904AF1D490CAC007DBE14 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				28BF72BF1D5973AF005734AE /* Users.swift in Sources */,
 				019096221D4F7BC500BA6F1D /* NewsVC.swift in Sources */,
 				01FB49CE1D55E909002DE733 /* SettingsVC.swift in Sources */,
 				010904AE1D490CAC007DBE14 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				010904A31D490BFD007DBE14 /* SWRevealViewController.m in Sources */,
+				28BF72BB1D59737A005734AE /* News.swift in Sources */,
+				28BF72BD1D597399005734AE /* Schedule.swift in Sources */,
 				01830E901D564FA8004BEF0E /* ConvertingDataVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

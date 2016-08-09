@@ -34,7 +34,8 @@ class SettingsVC:UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWReve
     
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
+        revealViewController().rearViewRevealWidth = UIScreen.mainScreen().bounds.width - 62
+        revealViewController().revealToggle(sender)
     }
     
     // MARK: -- tab bar deligate button tapped

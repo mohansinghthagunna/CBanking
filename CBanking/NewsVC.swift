@@ -47,6 +47,7 @@ class NewsVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
     
     // MARK: -- tab bar deligate button tapped
     func onTabMenuTapped(sender: UIButton) {
+        
         tabBarController?.selectedIndex = sender.tag
     }
     

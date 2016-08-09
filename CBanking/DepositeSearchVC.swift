@@ -157,6 +157,7 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     
     // MARK: -- tab bar deligate button tapped
     func onTabMenuTapped(sender: UIButton) {
+       
         tabBarController?.selectedIndex = sender.tag
     }
 

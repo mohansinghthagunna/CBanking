@@ -12,7 +12,8 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
 
     //MARK: -- Outlets
 
-    
+    //MARK:--Declaration
+    var data = NSMutableData()
     // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,7 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
         self.view.addSubview(customNavView);
         customNavView.delegate = self
         
-        
+         requestURL("d")
         //adding tabbar to the view controller
         let customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
         customTabView.setSelectedIcon(0)
@@ -68,6 +69,7 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
     
     // MARK: -- tab bar deligate button tapped
     func onTabMenuTapped(sender: UIButton) {
+     
         tabBarController?.selectedIndex = sender.tag
     }
     
@@ -108,7 +110,34 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
             //menu open
         }
     }
-    
-
+    //MARK:--webservice
+    func requestURL(strURL: String) {
+        let urlPath = "http://creatudevelopers.com.np/C_banking/showall.php"
+        let url: NSURL = NSURL(string: urlPath)!
+        let request: NSURLRequest = NSURLRequest(URL: url)
+        let connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)!
+        connection.start()
+        
+    }
+    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
+        self.data.appendData(data)
+    }
+    var count:Int = 1
+    func connectionDidFinishLoading(connection: NSURLConnection!) {
+      
+      
+            let jsonObject: [String:AnyObject]!
+        
+            do {
+                jsonObject = try NSJSONSerialization.JSONObjectWithData(data,
+                                                                        options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+               
+            } catch var err as NSError {
+                jsonObject = nil
+            }
+           // print(jsonObject)
+            
+        
+    }
 
 }

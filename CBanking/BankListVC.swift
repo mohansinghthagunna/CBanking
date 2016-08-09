@@ -54,7 +54,7 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
     
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
-        if CBanking.sharedInstance.menuSelect == 2 {
+        if tabBarController?.selectedIndex == 2 {
         revealViewController().rearViewRevealWidth = UIScreen.mainScreen().bounds.width - 62
         revealViewController().revealToggle(sender)
         }
@@ -65,7 +65,7 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
     
     // MARK: -- tab bar deligate button tapped
     func onTabMenuTapped(sender: UIButton) {
-        tabBarController?.selectedIndex = sender.tag
+    tabBarController?.selectedIndex = sender.tag
     }
     
     // MARK: -- reveal view controller deligate button tapped

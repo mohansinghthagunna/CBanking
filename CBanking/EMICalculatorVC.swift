@@ -8,7 +8,20 @@
 
 import UIKit
 
- class EMICalculatorVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealViewControllerDelegate  {
+ class EMICalculatorVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealViewControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource  {
+    
+    //MARK: --DEClaration
+    var yearSet = 0
+    var monthSet = 0
+
+    //MARK:--OUTLETS
+    
+    @IBOutlet var viewPicker: UIView!
+    @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var txtFieldAmount: UITextField!
+    
+    @IBOutlet var btnTime: UIButton!
+    @IBOutlet var txtFieldInterest: UITextField!
     // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +47,8 @@ import UIKit
     
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
+        revealViewController().rearViewRevealWidth = UIScreen.mainScreen().bounds.width - 62
+        revealViewController().revealToggle(sender)
 
     }
     
@@ -44,12 +58,30 @@ import UIKit
     }
     //MARK: --Button Actions
     
+    @IBAction func btnDoneTapped(sender: AnyObject) {
+        
+        
+        viewPicker.hidden = true
+        btnTime.hidden = false
+        btnTime.setTitle("\(yearSet) Year \(monthSet) Month", forState: .Normal)
+    }
+    @IBAction func btnCalcelTapped(sender: AnyObject) {
+        viewPicker.hidden = true
+        btnTime.hidden = false
+    }
     @IBAction func EMICalculationButtonActions(sender: AnyObject) {
         if sender.tag == 0{
-            
+            viewPicker.hidden = false
+             btnTime.hidden = true
         }
         else if sender.tag == 1 {
+            
+            let emiObj = EMIModel()
+            emiObj.n = (Double)(txtFieldAmount.text!)!
+            emiObj.p = (Double)(txtFieldInterest.text!)!
+            emiObj.r = (Double)(yearSet * 12 + monthSet)
             let calculationEMI = self.storyboard?.instantiateViewControllerWithIdentifier("calculationEMI") as! EMICalculationDataVC
+            calculationEMI.emiObj = emiObj
             self.navigationController?.pushViewController(calculationEMI, animated: true)
         }
     }
@@ -91,6 +123,45 @@ import UIKit
             //menu open
         }
     }
+    //Mark: --Picker View Delegates
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
     
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0{
+            return 31
+        }
+        else if component == 1 {
+            return 12
+        }
+        else{
+            return 30
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0{
+            return "\(row) Year"
+        }
+        else if component == 1{
+            return "\(row) Month"
+        }
+        else{
+            return "\(row) Day"
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if component == 0{
+            yearSet = row
+        }
+        if component == 1{
+            monthSet = row
+        }
+        
+        
+    }
     
  }

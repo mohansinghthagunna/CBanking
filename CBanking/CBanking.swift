@@ -25,6 +25,13 @@ class CBanking: NSObject {
     private
     var _menuSelect:Int = 0
     var _isMenuSelectionChanged = false
+    var _bankData:[Banks] = []
+     var _branchData:[Branch] = []
+     var _curencyData:[Currency] = []
+     var _depositeData:[Deposite] = []
+     var _loanData:[Loan] = []
+     var _newsData:[News] = []
+     var _scheduleData:[Schedule] = []
     
     //MARK:setter getter method
     internal
@@ -45,6 +52,72 @@ class CBanking: NSObject {
         }
         set {
             _isMenuSelectionChanged = newValue
+        }
+    }
+    
+    var bankData: [Banks] {
+        get {
+            
+            return _bankData
+        }
+        set {
+            _bankData = newValue
+        }
+    }
+    
+    var branchData: [Branch] {
+        get {
+            
+            return _branchData
+        }
+        set {
+            _branchData = newValue
+        }
+    }
+    var curencyData: [Currency] {
+        get {
+            
+            return _curencyData
+        }
+        set {
+            _curencyData = newValue
+        }
+    }
+
+    var depositeData: [Deposite] {
+        get {
+            
+            return _depositeData
+        }
+        set {
+            _depositeData = newValue
+        }
+    }
+    var loanData: [Loan] {
+        get {
+            
+            return _loanData
+        }
+        set {
+            _loanData = newValue
+        }
+    }
+    var newsData: [News] {
+        get {
+            
+            return _newsData
+        }
+        set {
+            _newsData = newValue
+        }
+    }
+    var scheduleData: [Schedule] {
+        get {
+            
+            return _scheduleData
+        }
+        set {
+            _scheduleData = newValue
         }
     }
 }

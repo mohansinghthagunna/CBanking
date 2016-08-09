@@ -8,7 +8,17 @@
 
 import UIKit
 
-class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealViewControllerDelegate  {
+class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealViewControllerDelegate,UITableViewDataSource,UITableViewDelegate  {
+    
+    //MARK: --OUTLET
+    
+    @IBOutlet var btnConvertFrom: UIButton!
+    @IBOutlet var txtFieldAmount: UITextField!
+    
+    @IBOutlet var btnCOnvertTo: UIButton!
+    @IBOutlet var tableVIew0: UITableView!
+    
+    @IBOutlet var tableView1: UITableView!
   // MARK: -- Self ViewController Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +44,21 @@ class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTap
     //MARK:-- Button Action
     @IBAction func CurrencyConvCalculationButtonActions(sender: AnyObject) {
         if sender.tag == 0{
+            if tableVIew0.hidden {
+                tableVIew0.hidden = false
+            }
+            else{
+                tableVIew0.hidden = true
+            }
             
         }
         else if sender.tag == 1 {
+            if  tableView1.hidden {
+                tableView1.hidden = false
+            }
+            else{
+                 tableView1.hidden = true
+            }
             
                    }
         else if sender.tag == 2{
@@ -47,7 +69,8 @@ class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTap
     }
     // MARK: -- nav bar deligate button tapped
     func navBarButtonTapped(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
+        revealViewController().rearViewRevealWidth = UIScreen.mainScreen().bounds.width - 62
+        revealViewController().revealToggle(sender)
     }
     
     // MARK: -- tab bar deligate button tapped
@@ -92,6 +115,27 @@ class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTap
             //menu open
         }
     }
+    //MARK: --Table View Deligate
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
+        cell.textLabel!.text = "Demo\(indexPath.row)"
+        cell.textLabel?.textColor = UIColor.blackColor()
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if tableView.tag == 0{
+            btnConvertFrom.setTitle("5", forState: .Normal)
+        }
+        else{
+               btnCOnvertTo.setTitle("6", forState: .Normal)
+        }
+        tableView.hidden = true
+        
+    }
 
 }
