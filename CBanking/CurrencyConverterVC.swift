@@ -26,6 +26,8 @@ class CurrencyConverterVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTap
         //adding navbar to the view controller
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
         customNavView.setTitle(AppName)
+        customNavView.setLeftImage("BackWhite.png")
+        customNavView.setRightImage("profileInitWhite.png")
         self.view.addSubview(customNavView);
         customNavView.delegate = self
         

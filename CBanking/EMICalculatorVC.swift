@@ -30,6 +30,8 @@ import UIKit
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
         customNavView.setTitle(AppName)
         self.view.addSubview(customNavView);
+        customNavView.setLeftImage("BackWhite.png")
+        customNavView.setRightImage("profileInitWhite.png")
         customNavView.delegate = self
         
         

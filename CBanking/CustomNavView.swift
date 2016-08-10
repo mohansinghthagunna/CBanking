@@ -18,6 +18,8 @@ protocol navBarBurgerMenuTapped {
      //MARK: --Outlets
     @IBOutlet var lblTitle: UILabel!
     
+    @IBOutlet var btnRight: UIImageView!
+    @IBOutlet var btnLeft: UIButton!
     //MARK: --Declarations
     var delegate: navBarBurgerMenuTapped?
     var view:UIView!
@@ -52,6 +54,13 @@ protocol navBarBurgerMenuTapped {
     //MARK: --Custom Functions
     func setTitle(title:String){
         //lblTitle.text = title
+    }
+    
+    func setLeftImage(image:String){
+        btnLeft.setImage(UIImage(named: image), forState: .Normal)
+    }
+    func setRightImage(image:String){
+        btnRight.image = UIImage(named: image)
     }
     
     //MARK: --BUtton Actions

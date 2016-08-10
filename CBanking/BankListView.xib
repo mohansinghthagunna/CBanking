@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,6 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-NH-8gy">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mKz-fp-AHv">
+                    <rect key="frame" x="74" y="49" width="173" height="126"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lh5-oi-5aZ">
                     <rect key="frame" x="0.0" y="182" width="320" height="336"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,17 +41,27 @@
             <constraints>
                 <constraint firstItem="lh5-oi-5aZ" firstAttribute="top" secondItem="XYR-ts-E8n" secondAttribute="bottom" id="0ty-Ip-H2x"/>
                 <constraint firstItem="lh5-oi-5aZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2lb-Xt-AeW"/>
+                <constraint firstItem="Pke-NH-8gy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9di-CQ-uHN"/>
+                <constraint firstAttribute="trailing" secondItem="Pke-NH-8gy" secondAttribute="trailing" id="ITk-Ro-nVV"/>
                 <constraint firstAttribute="trailing" secondItem="lh5-oi-5aZ" secondAttribute="trailing" id="KI8-QS-afP"/>
+                <constraint firstItem="mKz-fp-AHv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="49" id="Q6s-ee-Tk2"/>
                 <constraint firstItem="XYR-ts-E8n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="USV-x3-mlC"/>
+                <constraint firstItem="mKz-fp-AHv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="74" id="def-jZ-W9I"/>
+                <constraint firstAttribute="trailing" secondItem="mKz-fp-AHv" secondAttribute="trailing" constant="73" id="iKL-Ov-kx2"/>
                 <constraint firstAttribute="bottom" secondItem="lh5-oi-5aZ" secondAttribute="bottom" id="l9I-XV-D9Y"/>
+                <constraint firstAttribute="bottom" secondItem="Pke-NH-8gy" secondAttribute="bottom" id="oBl-yF-JsM"/>
+                <constraint firstItem="lh5-oi-5aZ" firstAttribute="top" secondItem="mKz-fp-AHv" secondAttribute="bottom" constant="7" id="qcx-l7-8cr"/>
                 <constraint firstAttribute="trailing" secondItem="XYR-ts-E8n" secondAttribute="trailing" id="tBH-wn-Ibv"/>
                 <constraint firstItem="XYR-ts-E8n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vXJ-Mj-xmz"/>
+                <constraint firstItem="Pke-NH-8gy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xs4-U4-heb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="245" y="283"/>
         </view>
     </objects>
     <resources>
+        <image name="bg" width="375" height="662"/>
         <image name="loan" width="330" height="172"/>
+        <image name="logo" width="199" height="124"/>
     </resources>
 </document>

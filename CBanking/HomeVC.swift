@@ -29,6 +29,8 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
         //adding navbar to the view controller
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
         customNavView.setTitle(AppName)
+        customNavView.setLeftImage("hamburgur")
+        customNavView.setRightImage("profileInit")
         self.view.addSubview(customNavView);
         customNavView.delegate = self
         
@@ -112,7 +114,7 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
     }
     //MARK:--webservice
     func requestURL(strURL: String) {
-        let urlPath = "http://creatudevelopers.com.np/C_banking/showall.php"
+        let urlPath = "http://creatudevelopers.com.np/C_banking/loanshow.php"
         let url: NSURL = NSURL(string: urlPath)!
         let request: NSURLRequest = NSURLRequest(URL: url)
         let connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)!
@@ -124,19 +126,25 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
     }
     var count:Int = 1
     func connectionDidFinishLoading(connection: NSURLConnection!) {
-      
-      
-            let jsonObject: [String:AnyObject]!
+ 
+            let jsonObject: [AnyObject]!
         
             do {
                 jsonObject = try NSJSONSerialization.JSONObjectWithData(data,
-                                                                        options: NSJSONReadingOptions(rawValue: 0)) as! [String : AnyObject]
+                                                                        options: NSJSONReadingOptions(rawValue: 0)) as! [AnyObject]
+                
                
             } catch var err as NSError {
+          
                 jsonObject = nil
             }
-           // print(jsonObject)
-            
+        if jsonObject != nil {
+            print(jsonObject)
+        }
+        else{
+            print("error json parse")
+        }
+        
         
     }
 

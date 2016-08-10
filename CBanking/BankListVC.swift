@@ -29,6 +29,7 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
         //adding tabbar to the view controller
         let bankListView =  BankListView(frame: CGRectMake(0,0,UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height-50))
         bankListView.resetHeadImage(image)
+        
         self.view.addSubview(bankListView);
         
         
@@ -42,6 +43,14 @@ class BankListVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,SWRe
         //adding tabbar to the view controller
         let customTabView =  CustomTabView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height-50,UIScreen.mainScreen().bounds.width, 50))
         customTabView.setSelectedIcon(2)
+        if tabBarController?.selectedIndex == 2{
+        customNavView.setLeftImage("hamburgurWhite.png")
+        customNavView.setRightImage("profileInitWhite.png")
+        }
+        else{
+            customNavView.setLeftImage("BackWhite.png")
+            customNavView.setRightImage("profileInitWhite.png")
+        }
         self.view.addSubview(customTabView);
         customTabView.delegate = self
         }

@@ -33,6 +33,8 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         //adding navbar to the view controller
         let customNavView =  CustomNavView(frame: CGRectMake(0, 0,UIScreen.mainScreen().bounds.width, 60))
         customNavView.setTitle(AppName)
+        customNavView.setLeftImage("hamburgurWhite.png")
+        customNavView.setRightImage("profileInitWhite.png")
         self.view.addSubview(customNavView);
         customNavView.delegate = self
         
@@ -54,7 +56,7 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     @IBAction func buttonTapped(sender: AnyObject) {
         if sender.tag == 0{
             //loan type button
-            pickerView.hidden = true
+            ViewPicker.hidden = true
             customTabView.isTabBarShow(false)
             if tableView.hidden {
                 tableView.hidden = false
@@ -66,12 +68,12 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         else if sender.tag == 1{
             //timer button
             tableView.hidden = true
-            if pickerView.hidden {
-                pickerView.hidden = false
+            if ViewPicker.hidden {
+                ViewPicker.hidden = false
                  customTabView.isTabBarShow(true)
             }
             else{
-                pickerView.hidden = true
+                ViewPicker.hidden = true
                  customTabView.isTabBarShow(false)
                 
             }
@@ -141,6 +143,22 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
         }
     }
     
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var attributedString: NSAttributedString!
+        
+        switch component {
+        case 0:
+            attributedString = NSAttributedString(string:  "\(row) Year", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        case 1:
+            attributedString = NSAttributedString(string: "\(row) Month", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+       
+        default:
+            attributedString = nil
+        }
+        
+        return attributedString
+    }
+
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0{
