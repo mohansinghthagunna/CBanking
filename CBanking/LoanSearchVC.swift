@@ -20,7 +20,6 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     @IBOutlet weak var txtFieldTotalAmount: UITextField!
     
     //Mark: --Decalrations
-    let LoanTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
     var yearSet = 0
     var monthSet = 0
     var customTabView =  CustomTabView()
@@ -49,6 +48,7 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     
     override func viewWillAppear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = true
+       
     }
     
     //Mark: --Button Action
@@ -100,18 +100,18 @@ class LoanSearchVC: UIViewController ,navBarBurgerMenuTapped,tabBarIconTapped,UI
     
     //MARK: --Table View Deligate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LoanTypes.count
+        return CBanking.sharedInstance.loanData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel!.text = LoanTypes[indexPath.row]
+        cell.textLabel!.text = CBanking.sharedInstance.loanData[indexPath.row].loanType
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.hidden = true
-        btnLoanType.setTitle(LoanTypes[indexPath.row], forState: .Normal)
+        btnLoanType.setTitle(CBanking.sharedInstance.loanData[indexPath.row].loanType, forState: .Normal)
     }
     
     //Mark: --Picker View Delegates

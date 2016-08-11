@@ -16,7 +16,10 @@ class BankListView: UIView,UITableViewDelegate {
     
     //MARK: --Declarations
     var view:UIView!
-    
+    var isFromBankList = 0
+     var bank:[Banks] = []
+     var loan = Loan()
+     var deposite = Deposite()
     //MARK: --View Setup
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,14 +54,28 @@ class BankListView: UIView,UITableViewDelegate {
     func resetHeadImage(image:UIImage){
         headImage.image = image
     }
+    func isBankList(flag:Int){
+        isFromBankList = flag
+    }
+    func resetDatas(){
+        
+    }
     //MARK: --Table View Delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return bank.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> BankListCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! BankListCell
-       
+        if isFromBankList == 1{
+            
+        }
+        else if isFromBankList == 2{
+            
+        }
+        else{
+            
+        }
         return cell
     }
     

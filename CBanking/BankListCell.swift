@@ -10,6 +10,11 @@ import UIKit
 
 class BankListCell: UITableViewCell {
 
+    @IBOutlet weak var viewLoanDepo: UIView!
+    @IBOutlet weak var lblRate: UILabel!
+    @IBOutlet weak var lblDistance: UILabel!
+    @IBOutlet weak var lblAmount: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -13,6 +13,7 @@ let AppName:String = "Creatu Banking"
 class Helper: NSObject {
 
     func parseJsonData(json:[String:AnyObject]){
+        
        CBanking.sharedInstance.bankData = bankParse(json["Bank"] as! [AnyObject])
        CBanking.sharedInstance.branchData = branchParse(json["Branch"] as! [AnyObject])
        CBanking.sharedInstance.curencyData = currencyParse(json["Currency"] as! [AnyObject])

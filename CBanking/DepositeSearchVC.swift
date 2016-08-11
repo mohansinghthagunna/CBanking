@@ -19,7 +19,6 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     @IBOutlet weak var txtFieldTotalAmount: UITextField!
     
     //Mark: --Decalrations
-    let depositeTypes:[String] = ["Loan 1","Loan 2","Loan 3","Loan 4","Loan 5","Loan 6"]
     var yearSet = 0
     var monthSet = 0
     var customTabView =  CustomTabView()
@@ -97,18 +96,18 @@ class DepositeSearchVC:  UIViewController ,navBarBurgerMenuTapped,tabBarIconTapp
     
     //MARK: --Table View Deligate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return depositeTypes.count
+        return CBanking.sharedInstance.depositeData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        cell.textLabel!.text = depositeTypes[indexPath.row]
+        cell.textLabel!.text = CBanking.sharedInstance.depositeData[indexPath.row].depositeType
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.hidden = true
-        btnLoanType.setTitle(depositeTypes[indexPath.row], forState: .Normal)
+        btnLoanType.setTitle(CBanking.sharedInstance.depositeData[indexPath.row].depositeType, forState: .Normal)
     }
     
     //Mark: --Picker View Delegates

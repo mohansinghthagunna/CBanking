@@ -19,7 +19,8 @@ class HomeVC: UIViewController,navBarBurgerMenuTapped,tabBarIconTapped,SWRevealV
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         revealViewController().delegate = self
-       
+        let helper = Helper()
+        let jsornstring:[String:AnyObject] = 
     }
     
     override func viewWillAppear(animated: Bool) {
